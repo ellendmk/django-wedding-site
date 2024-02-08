@@ -1,0 +1,29 @@
+[
+    {
+        "model": "guest_manager.families",
+        "pk": 1,
+        "fields": {
+            "family_id": 1,
+            "url_suffix": "dx5gsvsbunb8",
+            "child_allowed": 0
+        }
+    },
+    {
+        "model": "guest_manager.families",
+        "pk": 2,
+        "fields": {
+            "family_id": 2,
+            "url_suffix": "fz0meudd327m",
+            "child_allowed": 0
+        }
+    },
+    {
+        "model": "guest_manager.families",
+        "pk": 4,
+        "fields": {
+            "family_id": 4,
+            "url_suffix": "qboeu46u1sul",
+            "child_allowed": 0
+        }
+    }
+]
