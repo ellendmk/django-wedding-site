@@ -1,0 +1,359 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+ -->
+
+<head>
+    <title>E&B</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+
+    <!-- Font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Calligraffitti|Sacramento|Tangerine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura|Bilbo+Swash+Caps|Calligraffitti|Clicker+Script|Dancing+Script|Give+You+Glory|Great+Vibes|Henny+Penny|Montez|Mountains+of+Christmas|Parisienne|Sacramento|Srisakdi|Tangerine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore|Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--===============================================================================================-->	
+<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"> -->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+   
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <!-- <a class="navbar-brand" id="demo" style="color:aliceblue;"></a>  -->
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" style="font-family: 'Ubuntu';" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                                
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#home">INVITE <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#rsvp">RSVP</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#details">DETAILS</a> </li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="bg-gradient" id="home">
+        <div class="container mt-1" >
+            <div class="block-wider">
+   
+                    
+                <div>
+                    <h2>{{ invite_text | linebreaksbr }}</h2>
+
+                </div>
+                <div>
+                    <h4 style="font-family: 'Monteserrat',sans-serif;padding-bottom: 20px">JOIN US TO CELEBRATE THE WEDDING OF</h4>
+                
+                    <h1 >Ellen &#38; Byron</h1>
+                <h4 style="font-family: 'Monteserrat',sans-serif;">16H00, THURSDAY,</h4> 
+                    <h4 style="font-family: 'Monteserrat',sans-serif;">19TH OF DECEMBER 2019</h4>
+                <br>
+                    <h4 style="font-family: 'Monteserrat',sans-serif;">OAKFIELD FARM, 240 BEYERS NAUD&eacute;, MULDERSDRIFT</h4>
+                <br>
+                    <h4 style="font-family: 'Monteserrat',sans-serif;">DINNER AND DANCING TO FOLLOW</h4>
+                    <br>
+                    <h4 style="font-family: 'Monteserrat',sans-serif;">PLEASE RSVP BY THE 12TH OF NOVEMBER 2019</h4>
+                
+                    <h5 style="font-family: 'Monteserrat',sans-serif;">{{rsvp_text|upper}}</h5>
+                </div>
+                    <a class="btn custom-btn" style="font-family: 'Monteserrat',sans-serif;" href="#rsvp" >RSVP</a>
+                </div>
+            </div>
+
+        </div>
+    <div class="bg-solid" id="rsvp">
+        <div class="row" style="padding-top: 90px;">
+            <!-- <h1><h1> -->
+                    <div class="flex-w flex-c-m cd100">
+                            <div class="flex-col-c wsize1 m-b-30">
+                                <span class="l1-txt2 p-b-9 days"></span>
+                                <span class="s1-txt1 where1 p-l-35">Days</span>
+                            </div>
+            
+                            <div class="flex-col-c wsize1 m-b-30">
+                                <span class="l1-txt2 p-b-9 hours"></span>
+                                <span class="s1-txt1 where1 p-l-35">Hours</span>
+                            </div>
+            
+                            <div class="flex-col-c wsize1 m-b-30">
+                                <span class="l1-txt2 p-b-9 minutes"></span>
+                                <span class="s1-txt1 where1 p-l-35">Minutes</span>
+                            </div>
+            
+                            <div class="flex-col-c wsize1 m-b-30">
+                                <span class="l1-txt2 p-b-9 seconds"></span>
+                                <span class="s1-txt1 where1 p-l-35">Seconds</span>
+                            </div>
+                    </div>
+            <div class="grid-2-cols" style="align-content: center;">
+                {% if submit%}
+                <!-- <div class="block-wide-white-text"> -->
+
+                <div class="textbox">
+                    <!-- <p>{{ form|crispy }}</p> -->
+                    <!-- <p>{{form.attending.choices}}</p> -->
+                    <div class="small-textbox left">
+                        <h1 class="rsvp-text">
+                            {{response|linebreaksbr}}
+                        </h1>
+                    </div>
+                </div>
+                {%else%}
+
+                <form action="{{ submit_url }}" method="POST">
+                    {% csrf_token %}
+
+                    <div class=" textbox"  >
+                           
+                        {% ifequal names_list|length 3 %}
+                            <div class="grid-split-2">
+                        {% endifequal %}
+                    
+                        {% ifequal names_list|length 4 %}
+                            <div class="grid-split-2">
+                        {% else %}
+                            <div class="grid-split">
+                        {% endifequal %}
+                    
+                                <div class="grid-container">
+                                                
+                                    {{ form|crispy }}
+
+                                    {% for name,form in rsvp_form_names %}
+                                    <div class="card" style="font-family: 'Monteserrat',sans-serif;">
+                                        <h2 style="font-family: 'Great Vibes',cursive">{{name}}</h2>
+                                            <h3 style="font-size: 10px;color: #5E6572"></h3>
+                                                {% for item in form %}
+                                                <label for="{{item.id_for_label}}" class="container">{{item.choice_label}}
+                                                        {{item.tag}}
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                {% endfor %}
+                                            
+                                    </div>
+
+                                    {% endfor %}
+
+                                
+                                        <div class="card" >
+                                            <h2>
+                                                Message:
+                                            </h2> 
+                                            <div class="rsvp_message" style="font-size:20px;font-family: 'Montserrat', sans-serif;">{{ rsvp_message.message}}
+                                            </div>
+                                            <div>
+                                                <input type="submit"  value="RSVP" class="btn custom-btn" style="font-family: 'Monteserrat', sans-serif;" name="rsvp">
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                <br>    
+                            </div>
+                    </div>
+                 </form>
+                    {% endif%}
+                  
+
+
+
+                <div class="right img-fluid rounded-circle top" ></div>
+                
+                </div>
+                
+            </div>
+
+                
+        </div>
+
+    </div>
+   
+
+    <div class="section bg-gradient" id="details">
+            <div class="container mt-1">
+
+        <div class="block-wider" >
+                <div class="flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-120">
+                        <h3 class="l1-txt1 txt-center p-b-40 respon1">
+                        </h3>
+            
+                        
+                <h1>Ceremony & Reception</h1>
+                <h2>(Oakfield Farm - <a href="https://goo.gl/maps/JmUDGuELtS42BUd18" style="padding-bottom: 25px;">Map)</a> 
+                </h2> 
+    
+                <h3>{{"Ceremony: Conservatory"|upper}} </h3>
+                  <h3>{{"Reception: Summerhouse"|upper}}</h3> 
+                <h3>{{"Semi-formal attire"|upper}}</h3> 
+                <h3>{{"A cash bar will be available"|upper}}<br></h3>
+                <br>
+                <h1>Gifts</h1>
+                <h3>{{"We're currently planning a move abroad so are trying to scale back on what we own."|upper}}</h3>
+                <h3>{{"Please don't buy us a gift just come with an appetite and your dancing shoes!"|upper}}</h3>
+                <br>
+                <h1>Accomodation</h1>
+                
+                    <a href="https://www.cradlemoon.co.za/accommodation" style="font-family: 'Monteserrat', sans-serif">{{"Cradle moon"|upper}}</a>
+                    <a  href="https://www.nicebynature.co.za" style="font-family:  'Monteserrat', sans-serif">{{"Nice by Nature Guest House"|upper}}</a>
+                    <a  href="https://www.monchique.co.za" style="font-family:  'Monteserrat', sans-serif">{{"Monchique"|upper}}</a>
+                    <a  href="https://cradlevalley.co.za" style="font-family:  'Monteserrat', sans-serif">{{"Cradle Valley Guest House"|upper}}</a>
+                    <a  href="https://www.hartleymanor.co.za/" style="font-family: 'Monteserrat', sans-serif">{{"Hartley Manor"|upper}}</a>
+                    <a  href="https://www.holeinone.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Hole in One Guest House"|upper}}</a>
+                    <a  href="https://www.rhn.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Random Harvest Cottages"|upper}}</a>
+                    <a  href="https://www.avianto.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Avianto Hotel"|upper}}</a> 
+                    <a  href="https://www.hakunamatata.co.za/" style="font-family: 'Monteserrat', sans-serif">{{"Hakunamatata Lodge"|upper}}</a>    
+                    <a href="https://www.bosheuvelestate.co.za/" style="font-family: 'Monteserrat', sans-serif">{{"Bosheuvel Estate"|upper}}</a>    
+                <br>
+                <br>
+                <h1 >Shuttle services</h1>
+                <a  href="http://www.mrshuttle.co.za/" style="font-family: 'Monteserrat', sans-serif">{{"Mr Shuttle"|upper}}</a>
+                <a  href="https://selecta.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Selecta"|upper}}</a>
+                <a  href="http://www.minibushirejohannesburg.co.za/" style="font-family: 'Monteserrat', sans-serif">{{"Mini bus hire JHB"|upper}}</a>
+                <a  href="http://taxiclub.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Taxi Club"|upper}}</a>
+
+        </div>
+</div>
+
+    </div>
+
+   
+    <!-- jQuery and Bootstrap -->
+    <script src="{% static 'js/bootstrap4-toggle.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <!-- Plugins JS -->
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/script.js'%}"></script>
+
+    
+<script>
+$('.nav-link a').on('click', function(){
+    // $('.btn-navbar').click(); //bootstrap 2.x
+    // $('.nav-menu-toggle').click(); //bootstrap 3.x by Richard
+    $('.nav-menu-toggler').click(); //bootstrap 4.x
+});
+</script>
+                
+
+
+
+<!--===============================================================================================-->	
+<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/countdowntime/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/moment-timezone.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/moment-timezone-with-data.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+	<script>
+        /*Endtime must be > current time*/
+        var countDownDate = new Date("Dec 19, 2019 16:00:00").getTime();
+
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		$('.cd100').countdown100({
+			/*Set Endtime here*/
+			
+			endtimeYear: 2019,
+			endtimeMonth: 12,
+			endtimeDate: 19,
+			endtimeHours: 16,
+			endtimeMinutes: 00,
+			endtimeSeconds: 00,
+			timeZone: "Africa/Johannesburg" 
+			// ex:  timeZone: "America/New_York"
+			//go to " http://momentjs.com/timezone/ " to get timezone
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

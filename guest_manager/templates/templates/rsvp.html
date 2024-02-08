@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <form action="{{ submit_url }}" method="POST">
+    {% csrf_token %}
+    {% for name, form in rsvp_form_names %}
+
+        <p class="tm-hero-title" style="font-family: 'Amatic SC', cursive;padding-top: 25px;padding-bottom: 10px;" >
+            {{ name }}
+        </p>
+        <div style="padding-top: 3px;padding-bottom: 3px;">
+        <p class="tm-hero-form" style="font-family: 'Bad Script', cursive;" >
+          Attending:  {{ form.attending }}
+        </p> 
+        </div>
+        <!-- <div style="padding-top: 3px;padding-bottom: 3px;">
+        <p class="tm-hero-form" style="font-family: 'Indie Flower', cursive;" >
+         Dietary requirements:  {{ form.diet }}
+        </p>
+        </div> -->
+        <br>
+    {% endfor %}
+    <p class="tm-hero-form" style="font-family: 'Bad Script', cursive;padding-bottom: 25px" >
+         Message:  {{ rsvp_message.message }}
+        </p>
+
+        <input type="submit" value="RSVP" class="btn btn-success btn-lg" name="rsvp" style="font-family: 'Bad Script', cursive; font-size:large;">
+
+   </form>
+</div>          
+        <!-- <input type="checkbox" name="attend"  style="color: 'green';" style="font-family: 'Amatic SC', cursive;">{{name}}<br> -->
+    
+{% endblock %}
+
+
+
+ <!-- {%elif rsvp_form_names|length :divisibleby:0  %}
+                                <div class="col-8 col-lg-6">
+                                    <div class="card features">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <span class="gradient-fill ti-3x mr-3"></span>
+                                                <div class="media-body">
+                                                    <h2 class="card-title">{{ name }}</h2>
+                                                    <h2 class="card-text">                              Attending:  {{ form.attending }}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        {%else  %}
+                                <div class="col-8 col-lg-6">
+                                    <div class="card features">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <span class="gradient-fill ti-3x mr-3"></span>
+                                                <div class="media-body">
+                                                    <h2 class="card-title">{{ name }}</h2>
+                                                    <h2 class="card-text">                              Attending:  {{ form.attending }}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                       

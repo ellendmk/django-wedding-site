@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+                        <div style="padding-top:15px;padding-bottom:15px;">
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive" >{{ invite_text|linebreaksbr }}</p>
+                        </div>
+                        <div style="padding-top:15px;padding-bottom:15px;">
+                            <p class="tm-hero-subsubtitle" style="font-family: 'Amatic SC', cursive" >Join us to celebrate the wedding of</p>
+                        </div>
+                        <div style="padding-top:25px;padding-bottom:15px;">
+                            <p class="tm-hero-title" style="font-family: 'Bad Script', cursive;">Ellen &#38; Byron</p>
+                        </div>
+                        <div style="padding-top:15px;padding-bottom:15px;">
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">Thursday</p>
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">19th of December 2019</p>
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">16h00</p>
+                        </div>    
+                        <div style="padding-top:25px;padding-bottom:25px;">
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">Oakfield Farm</p>
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">240 Beyers Naud&eacute;</p>
+                            <p class="tm-hero-subtitle" style="font-family: 'Amatic SC', cursive;">Muldersdrift</p>
+                        </div>
+                            <p class="tm-hero-subsubtitle" style="font-family: 'Amatic SC', cursive;" >Dinner and dancing to follow</p>
+
+                        <div style="padding-top:25px;padding-bottom:5px;">
+                            <p class="tm-hero-subsubtitle"  style="font-family: 'Amatic SC', cursive;" >Please RSVP by the 19th November 2019</p>
+                        </div>
+                        <div style="padding-top:5px;padding-bottom:25px;">
+                            <p class="tm-hero-form"  style="font-family: 'Amatic SC', cursive;" >{{rsvp_text}}</p>
+                        </div>
+
+                            <a class="btn btn-success btn-lg" href="{{ rsvp_url }}" style="font-family: 'Bad Script', cursive;font-size:large;" >RSVP</a>
+                            
+</div>                      
+{% endblock %}

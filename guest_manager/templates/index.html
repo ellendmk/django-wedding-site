@@ -1,0 +1,413 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+ -->
+
+<head>
+    <title>E&B</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="You're invited to Ellen and Byron's wedding!">
+    <meta name="keywords" content="">
+
+    <!-- Font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Calligraffitti|Sacramento|Tangerine"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Allura|Bilbo+Swash+Caps|Calligraffitti|Clicker+Script|Dancing+Script|Give+You+Glory|Great+Vibes|Henny+Penny|Montez|Mountains+of+Christmas|Parisienne|Sacramento|Srisakdi|Tangerine&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore|Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"> -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'  %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <!--[if gte IE 4]>
+    <p>Sorry, Internet Explorer is not supported.<p>
+    Use <a href="http://firefox.com">Firefox</a> or <a href="https://www.google.com/chrome/">Chrome</a> instead.
+    <![endif]-->
+
+    <!--=[if !IE]-->
+
+    <div class="nav-menu fixed-top">
+        <div class="container" style="max-width:100vw;">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            style="font-family: 'Ubuntu';" data-target="#navbar" aria-controls="navbar"
+                            aria-expanded="false" aria-label="Toggle navigation"> <span
+                                class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item"> <a class="nav-link active" href="#home">INVITE <span
+                                            class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#rsvp">RSVP</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#details">DETAILS</a> </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient" id="home">
+        <div class="container mt-1 p-l-15 p-r-15">
+            <div class="block-wider ">
+                <div>
+                    <h2>{{ invite_text | linebreaksbr }}</h2>
+
+                </div>
+
+                <br>
+                <div>
+                    <h4 style="font-family: var(--font-maj); padding-bottom: 20px;padding-top: 20px;">JOIN US TO
+                        CELEBRATE THE WEDDING OF</h4>
+
+                    <h1 style="scroll-padding-left: 10px;padding-right: 10px;">Ellen &#38; Byron</h1>
+
+                    <h4 style="font-family: var(--font-maj);">15H30, THURSDAY,</h4>
+                    <h4 style="font-family: var(--font-maj);">19TH OF DECEMBER 2019</h4>
+                    <br>
+                    <h4 style="font-family: var(--font-maj);">OAKFIELD FARM,<br>240 BEYERS NAUD&Eacute;,<br>MULDERSDRIFT
+                    </h4>
+                    <br>
+                    <br>
+                    <h4 style="font-family:var(--font-maj);">DINNER AND DANCING TO FOLLOW</h4>
+                    <br>
+                    <h4 style="font-family: var(--font-maj); padding-bottom: 20px;">PLEASE RSVP BY THE 12TH OF NOVEMBER
+                        2019</h4>
+
+                    <h5 style="font-family: var(--font-maj);">{{child_text|linebreaksbr}}</h5>
+                </div>
+                <a class="btn custom-btn" style="font-family: var(--font-maj);" href="#rsvp">RSVP</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-solid" id="rsvp">
+        <div class="row">
+            <div class="block-wider-dark">
+                <div class="flex-w flex-c-m cd100">
+                    <div class="flex-col-c wsize1 m-b-30">
+                        <span class="l1-txt2 p-b-9 days" style="color:var(--main-color5);"></span>
+                        <span class="s1-txt1 where1 p-l-35" style="color:var(--main-color5);">Days</span>
+                    </div>
+
+
+
+                    <div class="flex-col-c wsize1 m-b-30">
+                        <span class="l1-txt2 p-b-9 hours" style="color:var(--main-color5);"></span>
+                        <span class="s1-txt1 where1 p-l-35" style="color:var(--main-color5);">Hours</span>
+                    </div>
+
+                    <div class="flex-col-c wsize1 m-b-30">
+                        <span class="l1-txt2 p-b-9 minutes" style="color:var(--main-color5);"></span>
+                        <span class="s1-txt1 where1 p-l-35" style="color:var(--main-color5);">Minutes</span>
+                    </div>
+
+                    <div class="flex-col-c wsize1 m-b-30">
+                        <span class="l1-txt2 p-b-9 seconds" style="color:var(--main-color5);"></span>
+                        <span class="s1-txt1 where1 p-l-35" style="color:var(--main-color5);">Seconds</span>
+                    </div>
+
+                    <h2 class="countdown" style="font-family: 'Great Vibes', cursive ;color:var(--main-color5);">...
+                        until our wedding</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" style="overflow-y:visible;">
+            <div class="grid-2-cols clear">
+                {% if submit%}
+
+                <div class="block-wider-dark" style="align-content: center; margin-top:1vh;height:auto;">
+
+                    <div class="small-textbox left">
+                        <h1 class="rsvp-text" style="color:var(--main-color5);">
+                            {{response|linebreaksbr}}
+                        </h1>
+                    </div>
+                </div>
+                {%else%}
+
+                <form action="{{ submit_url }}" method="POST">
+                    {% csrf_token %}
+
+                    <div class=" textbox">
+
+
+
+
+
+                        <div class={{ rsvp_container }}> 
+                        
+                                    <div class="grid-container" style="padding-top:2vh;">
+
+                                        {{ form|crispy }}
+
+                                        {% for name,form in rsvp_form_names %}
+                                        <div style="margin-bottom: 1vh;">
+                                            <div class="card"
+                                                style="font-family: var(--font-maj);color:var(--main-color5);">
+                                                <h2
+                                                    style="font-family: 'Great Vibes',cursive;color:var(--main-color5);  font-weight: bold;">
+                                                    {{name}}</h2>
+                                                <h3 style="font-size: 10px;color: #5E6572;"></h3>
+                                                {% for item in form %}
+                                                <label for="{{item.id_for_label}}" class="container"
+                                                    style="padding-left: 35px;padding-bottom: 10px;">{{item.choice_label}}
+                                                    {{item.tag}}
+                                                    <span class="checkmark"></span>
+                                                </label>
+
+                                                {% endfor %}
+                                            </div>
+
+                                        </div>
+                                        {% endfor %}
+
+
+                                        <div class="card">
+
+                                            <div class="rsvp_message"
+                                                style="font-size:20px;font-family: var(--font-maj);">
+                                                {{ rsvp_message.message}}
+                                            </div>
+                                            <div>
+                                                <input type="submit" value="RSVP" class="btn custom-btn"
+                                                    style="font-family: 'Monteserrat', sans-serif;" name="rsvp">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                </form>
+                {% endif%}
+
+
+
+
+                <div class="right rounded-circle" style="	box-shadow: 18px 18px 18px  rgba(0, 0, 0, 0.63);
+                        "></div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="bg-gradient" id="details">
+        <br>
+        <div class="block-wider">
+            <div class="flex-col-c-m p-l-15 p-r-15 p-t-0 p-b-0">
+                <br>
+                <br>
+
+                <h1>Ceremony & Reception</h1>
+                <h2>(Oakfield Farm - <a href="https://goo.gl/maps/JmUDGuELtS42BUd18"
+                        style="padding-bottom: 25px;">Map)</a>
+                </h2>
+
+                <h3>{{"Ceremony: Conservatory"|upper}} </h3>
+                <h3>{{"Reception: Summerhouse"|upper}}</h3>
+                <h3>{{"Semi-formal attire"|upper}}</h3>
+                <h3>{{"A cash bar will be available"|upper}}<br></h3>
+                <br>
+                <img src="{% static 'glasses.png' %}" class="sub-img-width">
+                <br>
+
+                <h1>Gifts</h1>
+                <h3>{{"We're currently planning a move abroad so are trying to scale back on what we own."|upper}}</h3>
+                <br>
+                <h3>{{"Please don't buy us a gift just come with an appetite and your dancing shoes!"|upper}}</h3>
+                <br>
+                <img src="{% static 'heartcircle.png' %}" class="sub-img-width">
+
+                <br>
+                <h1>Accomodation</h1>
+
+                <a href="https://www.cradlemoon.co.za/accommodation"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Cradle moon"|upper}}</a>
+                <a href="https://www.nicebynature.co.za"
+                    style="font-family:  'Monteserrat', sans-serif">{{"Nice by Nature Guest House"|upper}}</a>
+                <a href="https://www.monchique.co.za"
+                    style="font-family:  'Monteserrat', sans-serif">{{"Monchique"|upper}}</a>
+                <a href="https://cradlevalley.co.za"
+                    style="font-family:  'Monteserrat', sans-serif">{{"Cradle Valley Guest House"|upper}}</a>
+                <a href="https://www.hartleymanor.co.za/"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Hartley Manor"|upper}}</a>
+                <a href="https://www.holeinone.co.za"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Hole in One Guest House"|upper}}</a>
+                <a href="https://www.rhn.co.za"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Random Harvest Cottages"|upper}}</a>
+                <a href="https://www.avianto.co.za"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Avianto Hotel"|upper}}</a>
+                <a href="https://www.hakunamatata.co.za/"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Hakunamatata Lodge"|upper}}</a>
+                <a href="https://www.bosheuvelestate.co.za/"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Bosheuvel Estate"|upper}}</a>
+                <br>
+                <img src="{% static 'hearts_no_circle.png' %}" class="sub-img-width">
+
+                <br>
+                <h1>Shuttle services</h1>
+                <a href="https://www.mrshuttle.co.za/"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Mr Shuttle"|upper}}</a>
+                <a href="https://selecta.co.za" style="font-family: 'Monteserrat', sans-serif">{{"Selecta"|upper}}</a>
+                <a href="https://www.minibushirejohannesburg.co.za/"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Mini bus hire JHB"|upper}}</a>
+                <a href="https://taxiclub.co.za"
+                    style="font-family: 'Monteserrat', sans-serif">{{"Taxi Club"|upper}}</a>
+
+                <br>
+                <br>
+                <img src="{% static 'leafbanner.png' %}" class="sub-img-width">
+
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+
+    <script src="{% static 'js/bootstrap4-toggle.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+
+
+    <script>
+        $('.nav-link a').on('click', function () {
+            // $('.btn-navbar').click(); //bootstrap 2.x
+            // $('.nav-menu-toggle').click(); //bootstrap 3.x by Richard
+            $('.nav-menu-toggler').click(); //bootstrap 4.x
+        });
+    </script>
+
+
+
+
+    <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/countdowntime/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/countdowntime/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'vendor/countdowntime/moment-timezone-with-data.min.js' %}"></script>
+    <script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+    <script>
+        /*Endtime must be > current time*/
+        var countDownDate = new Date("Dec 19, 2019 16:00:00").getTime();
+
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        $('.cd100').countdown100({
+            /*Set Endtime here*/
+
+            endtimeYear: 2019,
+            endtimeMonth: 12,
+            endtimeDate: 19,
+            endtimeHours: 16,
+            endtimeMinutes: 00,
+            endtimeSeconds: 00,
+            timeZone: "Africa/Johannesburg"
+            // ex:  timeZone: "America/New_York"
+            //go to " http://momentjs.com/timezone/ " to get timezone
+        });
+    </script>
+    <script src="{% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% if anchor %}
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            window.location = '#{{ anchor }}'
+        });
+    </script>
+    {% endif %}
+    <!--[endif]-->
+
+
+</body>
+
+</html>
